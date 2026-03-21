@@ -1,0 +1,68 @@
+{
+    "name": "louis-innovations/sadad-laravel",
+    "description": "Laravel package wrapping the SADAD Payment Gateway PHP SDK with Laravel conveniences: service provider, facade, events, routes, and artisan commands.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Louis Innovations",
+            "email": "info@louis-innovations.com",
+            "homepage": "https://www.louis-innovations.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "louis-innovations/sadad-php-sdk": "^1.0 || dev-master",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/console": "^10.0|^11.0",
+        "illuminate/http": "^10.0|^11.0",
+        "illuminate/routing": "^10.0|^11.0",
+        "illuminate/events": "^10.0|^11.0",
+        "illuminate/database": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "orchestra/testbench": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LouisInnovations\\SadadLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LouisInnovations\\SadadLaravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LouisInnovations\\SadadLaravel\\SadadServiceProvider"
+            ],
+            "aliases": {
+                "Sadad": "LouisInnovations\\SadadLaravel\\Facades\\Sadad"
+            }
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../sadad-php-sdk",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "keywords": [
+        "sadad",
+        "qatar",
+        "payment-gateway",
+        "payment",
+        "checkout",
+        "invoice",
+        "laravel",
+        "laravel-package"
+    ]
+}
